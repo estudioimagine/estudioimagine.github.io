@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link rel="stylesheet" href="css.css">
+		<title>GOT • The Final Season</title>
+	</head>
+	<body>
+		<header class="menu">
+			<div class="menu-bar"></div>
+			<img class="menu-logo" src="hbo.png" alt="">
+			<a class="menu-ico" href="#" onclick=" return alternarMenu();"><i class="fas fa-bars"></i></a>
+			<nav id="menu-itens" class="menu-itens">
+				<a class="menu-item" data-ancora="a-home" href="#">Home</a>
+				<a class="menu-item" data-ancora="a-sobre" href="#">About</a>
+				<a class="menu-item" data-ancora="a-atividades" href="#">Cast</a>
+				<a class="menu-item" data-ancora="a-contato" href="#">News</a>
+			</nav>
+    </header>
+	<div class="close-menu" id="close-menu"></div>
+    <a class="ancora" id="a-home">.</a>
+    <div class="banner-box">
+      <div class="banner-titulo">
+        <h3>The Final Season</h3>
+        <h1>APRIL • 2019</h1>
+        <h2>#forthethrone</h2>
+      </div>
+      <div class="banner-img-box">
+        <img class="banner-img" src="banner.jpg" alt="banner">
+      </div>
+      <div class="banner-arrow-box">
+        <a class="banner-arrow" id="banner-arrow" data-ancora="a-sobre" href="#"><i class="fas fa-angle-down"></i></a>
+      </div>
+    </div>	
+
+		<a class="ancora" id="a-sobre">.</a>
+      <section class="section section-sobre">
+        <h2 class="sobre-titulo">Get set for THE LONG NIGHT!</h2>
+        <div class="sobre-text-box">
+          <p class="text">The Long Night is here, everyone. Game of Thrones Season 7 bowed out with an epic final episode in which we learned of Jon’s true parentage and saw The Night King and its Ice Dragon break down The Wall and move on Westeros. But we’re looking forward to Game of Thrones Season 8 already, so here’s absolutely everything we know about the show’s final episodes, including release date, casting news and trailers.</p>
+        </div>
+      </section>
+	  
+	<a class="ancora" id="a-atividades">.</a>
+	<section class="section-scroll section-detalhes">
+	<h2 class="detalhes-titulo">Cast for The Last Season</h2>
+		<div class="detalhes-scroll">
+			<div class="detalhes-item">
+				<img src="daenerys.jpg">
+				<h3 class="detalhes-item-titulo">Daenerys Targaryen</h3>
+			</div>
+			<div class="detalhes-item">
+				<img src="jon.jpg">
+				<h3 class="detalhes-item-titulo">Jon Snow</h3>
+			</div>
+			<div class="detalhes-item">
+				<img src="cersei.jpg">
+				<h3 class="detalhes-item-titulo">Cersei Lannister</h3>
+			</div>
+			<div class="detalhes-item">
+				<img src="jaime.jpg">
+				<h3 class="detalhes-item-titulo">Jaime Lannister</h3>
+			</div>
+			<div class="detalhes-item">
+				<img src="tyrion.jpg">
+				<h3 class="detalhes-item-titulo">Tyrion Lannister</h3>
+			</div>
+			<div class="detalhes-item">
+				<img src="sansa.jpg">
+				<h3 class="detalhes-item-titulo">Sansa Stark</h3>
+			</div>
+			<div class="detalhes-item">
+				<img src="arya.jpg">
+				<h3 class="detalhes-item-titulo">Arya Stark</h3>
+			</div>
+			<div class="detalhes-item">
+				<img src="bran.jpg">
+				<h3 class="detalhes-item-titulo">Bran Stark</h3>
+			</div>
+			<div class="item-final">
+            .
+			</div>
+        </div>
+	</section>
+
+	<a class="ancora" id="a-contato">.</a>
+	<section class="section section-contato">
+	<h2 class="news-titulo">News</h2>
+        <div class="contato-box">
+          <div class="social-box">
+            <div class="social-item-box">
+              <a class="social-item" target="_blank" href="https://www.facebook.com/gameofthrones"><i class="fab fa-facebook-square"></i></a>
+              <a class="social-item" target="_blank" href="https://www.instagram.com/gameofthrones"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-min">Like us</p>
+          </div>
+          <div class="news-box">
+            <form class="news-form" action="index.html" method="post">
+              <input class="input news-input" type="text" name="" value="" placeholder="Nos diga seu e-mail">
+              <a class="button news-button" id="news-button" href="#">Send</a>
+            </form>
+            <p class="text-min text-min-alt">Receba todas as informações sobre o evento</p>
+          </div>
+        </div>
+      </section>	 
+	<script>
+    //Código relacionado ao menu
+    menuAberto = false;
+    function alternarMenu(){
+      var links = document.getElementById('menu-itens');
+      var closeMenu = document.getElementById('close-menu');
+      if(menuAberto){
+        links.classList.remove("menu-aberto");
+        closeMenu.style.display = "none";
+      }else{
+        links.classList.add("menu-aberto");
+        closeMenu.style.display = "block";
+      }
+      menuAberto = !menuAberto;
+      return false;
+    }
+    function fecharMenu(){
+      var links = document.getElementById('menu-itens');
+      links.classList.remove("menu-aberto");
+      menuAberto = false;
+      var closeMenu = document.getElementById('close-menu');
+      closeMenu.style.display = "none";
+    }
+    var closeMenu = document.getElementById('close-menu');
+    closeMenu.addEventListener('click', function(e) {
+      fecharMenu();
+    }, false);
+
+
+
+    //Sobre o modal
+    var boxModal = document.getElementById('box-modal');
+    boxModal.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, false);
+    var modalClose = document.getElementById('modal-close');
+    modalClose.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeModal();
+    }, false);
+    var modalCloseIco = document.getElementById('modal-close-ico');
+    modalCloseIco.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeModal();
+    }, false);
+    var modalButton = document.getElementById('modal-button');
+    modalButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeModal();
+    }, false);
+    function closeModal(){
+      var modal = document.getElementById('box-modal');
+      modal.style.display = "none";
+    }
+    var btnNews = document.getElementById('news-button');
+    btnNews.addEventListener('click', function(e) {
+      e.preventDefault();
+      showModal();
+    }, false);
+    function showModal(){
+      var modal = document.getElementById('box-modal');
+      modal.style.display = "flex";
+    }
+
+
+
+    //Relacionado à setinha
+    var arrowCima = true;
+    var arrow = document.getElementById('banner-arrow');
+    var idAnime = setInterval(animaArrow, 1000);
+    function animaArrow(){
+      if(arrowCima){
+        arrow.classList.add("banner-arrow-alt");
+        arrowCima = false;
+      }else{
+        arrow.classList.remove("banner-arrow-alt");
+        arrowCima = true;
+      }
+    }
+    /*
+    arrow.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById(this.getAttribute("data-ancora")).scrollIntoView({
+          behavior: 'smooth', block: 'start', inline: 'nearest'
+      });
+    }, false);
+    */
+
+
+
+
+    //Referente às ancoras da página
+    document.querySelectorAll('[data-ancora]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            fecharMenu();
+            document.getElementById(this.getAttribute('data-ancora')).scrollIntoView({
+                behavior: 'smooth', block: 'start', inline: 'nearest'
+            });
+        });
+    });
+    </script>	
+	</body>
+</html>
